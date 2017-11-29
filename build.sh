@@ -11,11 +11,11 @@ CMAKE_BUILD_DIR=${1}
 OUTPUT_DIR=${2}
 
 if [ -z "${CMAKE_BUILD_DIR}" ]; then
-	CMAKE_BUILD_DIR=${DEFAULT_CMAKE_BUILD_DIR}
+  CMAKE_BUILD_DIR=${DEFAULT_CMAKE_BUILD_DIR}
 fi
 
 if [ -z "${OUTPUT_DIR}" ]; then
-	OUTPUT_DIR=${DEFAULT_OUTPUT_DIR}
+  OUTPUT_DIR=${DEFAULT_OUTPUT_DIR}
 fi
 
 ## Making sure directories are there
@@ -35,5 +35,5 @@ cmake ..
 make
 #objdump -dC prog > prog.asm
 
-mv prog ${ORIGIN}/${OUTPUT_DIR}
+mv prog* ${ORIGIN}/${OUTPUT_DIR}
 #mv prog.asm ${ORIGIN}/${OUTPUT_DIR}
